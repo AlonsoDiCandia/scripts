@@ -8,8 +8,8 @@ Rectangle::Rectangle() {
     x = Interval(0);
     y = Interval(0);
 
-    rx = 0.0;
-    ry = 0.0;
+    rx = -1;
+    ry = -1;
 }
 
 // Constructor con parámetros
@@ -17,23 +17,23 @@ Rectangle::Rectangle(double val1, double val2) {
     x = Interval(val1);
     y = Interval(val2);
 
-    ry = 0.0;
-    ry = 0.0;
+    ry = -1;
+    ry = -1;
 }
 
-double Rectangle::get_rx() {
+int Rectangle::get_rx() {
     return rx;
 }
 
-double Rectangle::get_ry() {
+int Rectangle::get_ry() {
     return ry;
 }
 
-void Rectangle::set_rx(double x) {
+void Rectangle::set_rx(int x) {
     rx = x;
 }
 
-void Rectangle::set_ry(double y) {
+void Rectangle::set_ry(int y) {
     ry = y;
 }
 
@@ -69,8 +69,8 @@ bool Rectangle::isOverlap(Rectangle r) {
                 ryi = ry[j];
 
                 if (y_0 <= ryi && y_1 >= ryi) {
-                    set_rx(rxi);
-                    set_ry(ryi);
+                    set_rx(i);
+                    set_ry(j);
                     return true;
                 }
             }

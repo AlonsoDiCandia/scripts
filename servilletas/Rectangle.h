@@ -8,11 +8,11 @@ public:
     Rectangle(); // Constructor por defecto
     Rectangle(double val1, double val2); // Constructor con parámetros
 
-    double get_rx();
-    double get_ry();
+    int get_rx();
+    int get_ry();
 
-    void set_rx(double x);
-    void set_ry(double y);
+    void set_rx(int x);
+    void set_ry(int y);
 
     vector<double> eje_x() const;
     vector<double> eje_y() const;
@@ -23,7 +23,7 @@ private:
     Interval x;
     Interval y;
 
-    double rx, ry;
+    int rx, ry;
 };
 
 #endif //RECTANGLE_H
